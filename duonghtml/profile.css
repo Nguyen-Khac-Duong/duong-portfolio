@@ -1,0 +1,358 @@
+/* 1. ĐẶT NỀN CHUNG CHO TOÀN BỘ TRANG WEB */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Dùng dải màu của bạn nhưng đặt vào body */
+    background: linear-gradient(135deg, #2b3741 0%, #004385 100%);
+    background-attachment: fixed;
+    /* Nền đứng yên khi cuộn, tạo chiều sâu */
+    color: white;
+    overflow-x: hidden;
+    /* Tránh bị vỡ khung ngang */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+section {
+    scroll-margin-top: 150px; /* Độ cao này bằng hoặc lớn hơn độ cao của Navbar một chút */
+}
+/* 2. NAVBAR (Giữ nguyên nhưng sửa lỗi dấu phẩy ở transition) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: rgba(86, 120, 154, 0.9);
+    /* Thêm chút trong suốt cho xịn */
+    color: white;
+    position: sticky;
+    /* Giữ menu ở trên cùng khi cuộn */
+    top: 0;
+    z-index: 1000;
+}
+
+.logo h1 span {
+    color: #7721b5;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.5s;
+    /* Đã sửa dấu phẩy thành dấu chấm */
+}
+
+.nav-links a:hover {
+    color: #1bb5f7;
+}
+
+/* 3. HERO SECTION (Bỏ background để lộ nền body) */
+.hero {
+    height: 65vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.greeting {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: #1bb5f7;
+}
+
+.name {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+    /* Đã sửa lỗi chính tả */
+}
+
+.name span {
+    color: #1bb5f7;
+}
+
+.job {
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: #bdc3c7;
+}
+
+.desc {
+    /* Đã sửa từ .decs thành .desc */
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+    line-height: 1.8;
+    color: #ecf0f1;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background-color: #1bb5f7;
+    color: white;
+}
+
+.btn-secondary {
+    border: 2px solid #1bb5f7;
+    color: #1bb5f7;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-3px);
+}
+
+.btn-secondary:hover {
+    background-color: #1bb5f7;
+    color: white;
+}
+
+.skills {
+    padding: 20px 40px 50px;
+    margin: 40px 10%;
+    /* backdrop-filter: blur(10px); */
+    border-radius: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+.skills h2{
+    color: #7493f8;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.skills-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 25px;
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+.skill-card {
+    flex: 1 1 220px;
+    max-width: 325px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.skill-card:hover {
+    background: rgba(52, 152, 219, 0.15);
+    border-color: #1bb5f7;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.projects{
+    margin: 40px 10%;
+    padding:80px 10%;
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.projects h2 {
+    font-size: 2.2rem;
+    color: #7493f8;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+.project-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-card {
+    flex: 1 1 350px;
+    max-width: 450px;
+    background: rgba(52, 152, 219, 0.05);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.3s;
+    
+}
+
+.project-image{
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+.project-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(82, 156, 229, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px auto;
+    text-align: center;
+    opacity: 0;
+    transition: 0.5s;
+}
+.project-overlay p {
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.6; /* Tạo khoảng cách dòng cho dễ đọc */
+    margin-bottom: 20px;
+    
+    /* Đảm bảo chữ không bao giờ tràn ra ngoài */
+    word-wrap: break-word; 
+    max-width: 75%;
+}
+
+.project-card:hover .project-overlay{
+    opacity: 1;
+}
+.project-card:hover .project-image{
+    transform: scale(1.1);
+}
+
+.project-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.project-info h3 {
+    margin-bottom: 10px;
+    color: #1bb5f7;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(27, 181, 247, 0.1);
+    color: #1bb5f7;
+    border-radius:15px ;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.contact {
+    padding: 100px 10%;
+    text-align: center;
+}
+
+.contact-box {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    padding: 60px 40px;
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact h2{
+    font-size: 2.2rem;
+    color: #1bb5f7;
+    margin-bottom: 20px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.contact-item .icon {
+    font-size: 2.5rem;
+}
+
+.contact-item:hover{
+    color: #1bb5f7;
+    transform: translateY(-5px);
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 50px;
+}
+
+footer span {
+    color: #1bb5f7;
+    font-weight: bold;
+}
+
+/* Tùy chỉnh thanh cuộn cho trình duyệt Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2b3741; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1bb5f7; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7493f8; 
+}
